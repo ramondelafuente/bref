@@ -3,15 +3,16 @@ module.exports = ({ theme }) => ({
     css: {
       '--tw-prose-body': theme('colors.zinc.700'),
       '--tw-prose-headings': theme('colors.zinc.900'),
-      '--tw-prose-links': theme('colors.emerald.500'),
-      '--tw-prose-links-hover': theme('colors.emerald.600'),
-      '--tw-prose-links-underline': theme('colors.emerald.500 / 0.3'),
+      '--tw-prose-links': theme('colors.blue.600'),
+      '--tw-prose-links-hover': theme('colors.blue.700'),
+      '--tw-prose-links-underline': theme('colors.blue.600 / 0.3'),
       '--tw-prose-bold': theme('colors.zinc.900'),
       '--tw-prose-counters': theme('colors.zinc.500'),
       '--tw-prose-bullets': theme('colors.zinc.300'),
       '--tw-prose-hr': theme('colors.zinc.900 / 0.05'),
-      '--tw-prose-quotes': theme('colors.zinc.900'),
-      '--tw-prose-quote-borders': theme('colors.zinc.200'),
+      '--tw-prose-quotes': theme('colors.blue.700'),
+      '--tw-prose-quotes-bg': theme('colors.blue.100'),
+      '--tw-prose-quote-borders': theme('colors.blue.400'),
       '--tw-prose-captions': theme('colors.zinc.500'),
       '--tw-prose-code': theme('colors.zinc.900'),
       '--tw-prose-code-bg': theme('colors.zinc.100'),
@@ -21,15 +22,16 @@ module.exports = ({ theme }) => ({
 
       '--tw-prose-invert-body': theme('colors.zinc.400'),
       '--tw-prose-invert-headings': theme('colors.white'),
-      '--tw-prose-invert-links': theme('colors.emerald.400'),
-      '--tw-prose-invert-links-hover': theme('colors.emerald.500'),
-      '--tw-prose-invert-links-underline': theme('colors.emerald.500 / 0.3'),
+      '--tw-prose-invert-links': theme('colors.blue.400'),
+      '--tw-prose-invert-links-hover': theme('colors.blue.500'),
+      '--tw-prose-invert-links-underline': theme('colors.blue.500 / 0.3'),
       '--tw-prose-invert-bold': theme('colors.white'),
       '--tw-prose-invert-counters': theme('colors.zinc.400'),
       '--tw-prose-invert-bullets': theme('colors.zinc.600'),
       '--tw-prose-invert-hr': theme('colors.white / 0.05'),
-      '--tw-prose-invert-quotes': theme('colors.zinc.100'),
-      '--tw-prose-invert-quote-borders': theme('colors.zinc.700'),
+      '--tw-prose-invert-quotes': theme('colors.blue.100'),
+      '--tw-prose-invert-quotes-bg': theme('colors.blue.900'),
+      '--tw-prose-invert-quote-borders': theme('colors.blue.800'),
       '--tw-prose-invert-captions': theme('colors.zinc.400'),
       '--tw-prose-invert-code': theme('colors.white'),
       '--tw-prose-invert-code-bg': theme('colors.zinc.700 / 0.15'),
@@ -39,8 +41,8 @@ module.exports = ({ theme }) => ({
 
       // Base
       color: 'var(--tw-prose-body)',
-      fontSize: theme('fontSize.sm')[0],
-      lineHeight: theme('lineHeight.7'),
+      fontSize: theme('fontSize.base')[0],
+      lineHeight: theme('lineHeight.6'),
 
       // Layout
       '> *': {
@@ -56,19 +58,19 @@ module.exports = ({ theme }) => ({
 
       // Text
       p: {
-        marginTop: theme('spacing.6'),
-        marginBottom: theme('spacing.6'),
+        marginTop: theme('spacing.4'),
+        marginBottom: theme('spacing.4'),
       },
       '[class~="lead"]': {
-        fontSize: theme('fontSize.base')[0],
-        ...theme('fontSize.base')[1],
+        fontSize: theme('fontSize.lg')[0],
+        ...theme('fontSize.lg')[1],
       },
 
       // Lists
       ol: {
         listStyleType: 'decimal',
-        marginTop: theme('spacing.5'),
-        marginBottom: theme('spacing.5'),
+        marginTop: theme('spacing.4'),
+        marginBottom: theme('spacing.4'),
         paddingLeft: '1.625rem',
       },
       'ol[type="A"]': {
@@ -100,8 +102,8 @@ module.exports = ({ theme }) => ({
       },
       ul: {
         listStyleType: 'disc',
-        marginTop: theme('spacing.5'),
-        marginBottom: theme('spacing.5'),
+        marginTop: theme('spacing.4'),
+        marginBottom: theme('spacing.4'),
         paddingLeft: '1.625rem',
       },
       li: {
@@ -159,22 +161,18 @@ module.exports = ({ theme }) => ({
       },
 
       // Quotes
+      // TODO
       blockquote: {
-        fontWeight: '500',
-        fontStyle: 'italic',
         color: 'var(--tw-prose-quotes)',
+        backgroundColor: 'var(--tw-prose-quotes-bg)',
         borderLeftWidth: '0.25rem',
         borderLeftColor: 'var(--tw-prose-quote-borders)',
-        quotes: '"\\201C""\\201D""\\2018""\\2019"',
-        marginTop: theme('spacing.8'),
-        marginBottom: theme('spacing.8'),
+        marginTop: theme('spacing.5'),
+        marginBottom: theme('spacing.5'),
         paddingLeft: theme('spacing.5'),
-      },
-      'blockquote p:first-of-type::before': {
-        content: 'open-quote',
-      },
-      'blockquote p:last-of-type::after': {
-        content: 'close-quote',
+        paddingRight: theme('spacing.5'),
+        paddingTop: theme('spacing.2'),
+        paddingBottom: theme('spacing.2'),
       },
 
       // Headings
@@ -345,6 +343,7 @@ module.exports = ({ theme }) => ({
       '--tw-prose-bullets': 'var(--tw-prose-invert-bullets)',
       '--tw-prose-hr': 'var(--tw-prose-invert-hr)',
       '--tw-prose-quotes': 'var(--tw-prose-invert-quotes)',
+      '--tw-prose-quotes-bg': 'var(--tw-prose-invert-quotes-bg)',
       '--tw-prose-quote-borders': 'var(--tw-prose-invert-quote-borders)',
       '--tw-prose-captions': 'var(--tw-prose-invert-captions)',
       '--tw-prose-code': 'var(--tw-prose-invert-code)',
