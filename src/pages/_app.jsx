@@ -24,9 +24,9 @@ export default function App({ Component, pageProps }) {
     <>
       <Head>
         {router.pathname === '/' ? (
-          <title>Protocol API Reference</title>
+          <title>Bref - Serverless PHP made simple</title>
         ) : (
-          <title>{`${pageProps.title} - Protocol API Reference`}</title>
+          <title>{`${pageProps.title} - Bref`}</title>
         )}
         <meta name="description" content={pageProps.description} />
       </Head>
