@@ -19,6 +19,11 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
+  exportPathMap: function () {
+    return {
+      '/docs': {page: '/docs/README'},
+    }
+  }
 }
 
 export default withMDX(nextConfig)
