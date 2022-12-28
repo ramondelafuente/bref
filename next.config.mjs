@@ -4,6 +4,7 @@ import { rehypePlugins } from './mdx/rehype.mjs'
 import { recmaPlugins } from './mdx/recma.mjs'
 
 const withMDX = nextMDX({
+  extension: /\.(md|mdx)?$/,
   options: {
     remarkPlugins,
     rehypePlugins,
