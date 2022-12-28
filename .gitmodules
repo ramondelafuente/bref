@@ -1,0 +1,4 @@
+[submodule "bref"]
+	path = bref
+	url = git@github.com:brefphp/bref.git
+	branch = v2
