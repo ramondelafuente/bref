@@ -19,11 +19,17 @@ const nextConfig = {
   experimental: {
     scrollRestoration: true,
   },
-  exportPathMap: function () {
-    return {
-      '/docs': {page: '/docs/README'},
-    }
-  }
+  async redirects() {
+    return [
+      {
+        source: '/docs/:path*.html',
+        destination: '/docs/:path*',
+        // TODO enable permanent redirect when all pages are migrated
+        permanent: false,
+        // permanent: true,
+      },
+    ]
+  },
 }
 
 export default withMDX(nextConfig)
