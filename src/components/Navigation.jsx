@@ -28,10 +28,11 @@ function TopLevelNavItem({ href, children }) {
   )
 }
 
-function NavLink({ href, tag, active, isAnchorLink = false, children }) {
+function NavLink({ href, tag, active, title, isAnchorLink = false, children }) {
   return (
     <Link
       href={href}
+      title={title}
       aria-current={active ? 'page' : undefined}
       className={clsx(
         'flex justify-between gap-2 py-1 pr-3 text-sm transition',
@@ -144,7 +145,7 @@ function NavigationGroup({ group, className }) {
         <ul role="list" className="border-l border-transparent">
           {group.links.map((link) => (
             <motion.li key={link.href} layout="position" className="relative">
-              <NavLink href={link.href} active={link.href === router.pathname}>
+              <NavLink href={link.href} title={link.description} active={link.href === router.pathname}>
                 {link.title}
               </NavLink>
               <AnimatePresence mode="popLayout" initial={false}>
@@ -197,6 +198,62 @@ export const navigation = [
     title: 'Bref for web apps',
     links: [
       { title: 'Web apps on AWS Lambda', href: '/docs/runtimes/http' },
+      { title: 'Website assets', href: '/docs/websites' },
+      { title: 'Console commands', href: '/docs/runtimes/console' },
+      { title: 'Cron commands', href: '/docs/web-apps/cron', description: 'CLI cron tasks' },
+      { title: 'Local development', href: '/docs/web-apps/local-development' },
+      { title: 'Docker', href: '/docs/web-apps/docker' },
+    ],
+  },
+  {
+    title: 'Frameworks',
+    links: [
+      { title: 'Laravel', href: '/docs/frameworks/laravel', description: 'Learn how to deploy serverless Laravel applications' },
+      { title: 'Symfony', href: '/docs/frameworks/symfony', description: 'Learn how to deploy serverless Symfony applications' },
+    ],
+  },
+  {
+    title: 'Bref for event-driven functions',
+    links: [
+      { title: 'PHP functions on AWS Lambda', href: '/docs/runtimes/function' },
+      { title: 'Typed handlers', href: '/docs/function/handlers' },
+      { title: 'Local development', href: '/docs/function/local-development' },
+      { title: 'Cron functions', href: '/docs/function/cron' },
+    ],
+  },
+  {
+    title: 'Workflow',
+    links: [
+      { title: 'Deployment', href: '/docs/deploy' },
+    ],
+  },
+  {
+    title: 'Environment',
+    links: [
+      { title: 'serverless.yml', href: '/docs/environment/serverless-yml', description: 'Configure your application with the serverless.yml file' },
+      { title: 'PHP', href: '/docs/environment/php', description: 'Configuring PHP versions and options with Bref' },
+      { title: 'Environment variables', href: '/docs/environment/variables', description: 'Configuring environment variables with Bref' },
+      { title: 'Logs', href: '/docs/environment/logs', description: 'Managing logs with Bref on AWS Lambda' },
+      { title: 'Storage', href: '/docs/environment/storage', description: 'Storing files and data with Bref on AWS Lambda' },
+      { title: 'Databases', href: '/docs/environment/database', description: 'Using a database with PHP on AWS Lambda' },
+      { title: 'Custom domains', href: '/docs/environment/custom-domains' },
+      { title: 'Performance', href: '/docs/environment/performances', description: 'Performance tuning and optimizations' },
+    ],
+  },
+  {
+    title: 'Learning',
+    links: [
+      { title: 'Course', href: 'https://serverless-visually-explained.com/?ref=bref-menu', description: 'Serverless Visually Explained' },
+      { title: 'Community', href: '/docs/community', description: 'Where to learn and exchange about Bref' },
+      { title: 'Case studies', href: '/docs/case-studies', description: 'A collection of case studies of serverless PHP applications built using Bref' },
+    ],
+  },
+  {
+    title: 'Ecosystem',
+    links: [
+      { title: 'GitHub', href: 'https://github.com/brefphp', description: 'Bref on GitHub' },
+      { title: 'Twitter', href: 'https://twitter.com/brefphp', description: 'Bref on Twitter' },
+      { title: 'Bref Dashboard', href: 'https://dashboard.bref.sh/?ref=bref', description: 'Bref Dashboard' },
     ],
   },
 ]
