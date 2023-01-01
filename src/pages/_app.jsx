@@ -32,6 +32,9 @@ export default function App({ Component, pageProps }) {
       </Head>
       <MDXProvider components={mdxComponents}>
         <Layout {...pageProps}>
+            {router.pathname.startsWith('/docs/') ? (
+                <h1>{pageProps.title}</h1>
+            ) : ''}
           <Component {...pageProps} />
         </Layout>
       </MDXProvider>
