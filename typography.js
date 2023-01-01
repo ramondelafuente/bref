@@ -171,8 +171,8 @@ module.exports = ({ theme }) => ({
         marginBottom: theme('spacing.5'),
         paddingLeft: theme('spacing.5'),
         paddingRight: theme('spacing.5'),
-        paddingTop: theme('spacing.2'),
-        paddingBottom: theme('spacing.2'),
+        paddingTop: theme('spacing.1'),
+        paddingBottom: theme('spacing.1'),
       },
 
       // Headings
