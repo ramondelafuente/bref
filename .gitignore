@@ -12,3 +12,4 @@
 /.serverless/
 .phpunit.result.cache
 node_modules
+.vercel

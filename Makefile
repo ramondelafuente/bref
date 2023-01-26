@@ -7,23 +7,16 @@ runtime_build_status:
 	aws codepipeline get-pipeline-state --name=bref-php-binary | jq ".stageStates[1].latestExecution.status"
 
 # Generate and deploy the production version of the website using http://couscous.io
-website:
-	# See http://couscous.io/
-	couscous generate
-	netlify deploy --prod --dir=.couscous/generated
-website-staging:
-	couscous generate
-	netlify deploy --dir=.couscous/generated
+website: node_modules
+	cd website && vercel pull
+	cd website && vercel build --prod
+	cd website && vercel --prebuilt --prod
+node_modules:
+	npm install
 
-# Run a local preview of the website using http://couscous.io
+# Run a local preview of the website
 website-preview:
-	couscous preview
-
-website-assets: website/template/output.css
-website/template/output.css: website/node_modules website/template/styles.css website/tailwind.config.js
-	cd website && NODE_ENV=production npx tailwind build template/styles.css -o template/output.css
-website/node_modules: website/package.json website/package-lock.json
-	cd website && npm install
+	npm run dev
 
 # Deploy the demo functions
 demo:
@@ -35,4 +28,4 @@ layers.json:
 test-stack:
 	serverless deploy -c tests/serverless.tests.yml
 
-.PHONY: website website-preview website-assets demo layers.json test-stack
+.PHONY: website website-preview demo layers.json test-stack
