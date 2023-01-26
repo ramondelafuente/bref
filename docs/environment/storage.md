@@ -1,8 +1,8 @@
 ---
-title: Storage
-current_menu: storage
 introduction: Learn how to store data and files in serverless PHP applications running on AWS Lambda.
 ---
+
+# Storage
 
 Here is a simplified overview of the filesystem on AWS Lambda:
 

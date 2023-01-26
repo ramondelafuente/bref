@@ -1,8 +1,8 @@
 ---
-title: Performance
-current_menu: performances
 introduction: Performance tuning and optimizations for serverless PHP applications on AWS Lambda.
 ---
+
+# Performance
 
 This article sums up what to expect in terms of performance and how to optimize serverless PHP applications. The benchmarks included in this page can be reproduced via [the code on GitHub](https://github.com/brefphp/benchmarks).
 

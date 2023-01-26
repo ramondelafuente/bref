@@ -1,10 +1,4 @@
----
-title: Local development for web apps
-current_menu: web-local-development
-previous:
-    link: /docs/web-apps/cron.html
-    title: Cron commands
----
+# Local development for web apps
 
 It is possible to run **web applications** locally.
 

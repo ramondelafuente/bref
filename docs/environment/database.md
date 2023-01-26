@@ -1,8 +1,8 @@
 ---
-title: Using a database
-current_menu: database
 introduction: Configure Bref to use a database in your PHP application on AWS Lambda.
 ---
+
+# Using a database
 
 AWS offers the [RDS](https://aws.amazon.com/rds/) service to run MySQL and PostgreSQL databases.
 

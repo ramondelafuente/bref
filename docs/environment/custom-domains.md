@@ -1,8 +1,8 @@
 ---
-title: Custom domain names
-current_menu: custom-domains
 introduction: Configure custom domain names for your web applications.
 ---
+
+# Custom domain names
 
 API Gateway generates random domain names for our applications:
 

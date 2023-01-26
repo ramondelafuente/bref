@@ -1,8 +1,8 @@
 ---
-title: Environment variables
-current_menu: variables
 introduction: Define environment variables for your Bref application.
 ---
+
+# Environment variables
 
 Environment variables are the perfect solution to configure the application (as recommended in the [12 factor guide](https://12factor.net/config)).
 

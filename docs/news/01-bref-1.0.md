@@ -1,11 +1,12 @@
 ---
-title: Bref 1.0 is released 🎉
 subTitle: Celebrating 1 billion executions per month
 layout: news-article
 articleDate: November 2020
 author: Matthieu Napoli
 authorGithub: mnapoli
 ---
+
+# Bref 1.0 is released 🎉
 
 Bref started in November 2017, 3 years ago. Back then, running PHP on AWS Lambda was experimental at best.
 
@@ -109,7 +110,7 @@ New users now start with the _FPM_ runtime.
 
 Don't worry about FaaS and functions… Start by running **PHP as usual** on a cheap and scalable host. Then, **once you've had your first success**, you can look into the "Function runtime" and its power.
 
-Check out [the "First steps" guide and see how simple it is!](/docs/first-steps.md).
+Check out [the "First steps" guide and see how simple it is!](/docs/first-steps.mdx).
 
 ### Clarity for current users
 
@@ -255,7 +256,7 @@ and [many others](https://github.com/sponsors/mnapoli#sponsors). Thank you all!
 
 Hope you enjoy it! And stay tuned for the AWS re:Invent conference next week!
 
-You can also join the community [in Slack](/docs/community.md), post details about your project in [Built with Bref](https://github.com/brefphp/bref/issues/267) or share your experience online.
+You can also join the community [in Slack](/docs/community.mdx), post details about your project in [Built with Bref](https://github.com/brefphp/bref/issues/267) or share your experience online.
 
 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
     <a href="/docs/" class="rounded-md shadow px-8 py-8 border text-center font-bold hover:bg-gray-100">What is Bref and serverless?</a>

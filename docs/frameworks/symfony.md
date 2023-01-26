@@ -1,8 +1,8 @@
 ---
-title: Serverless Symfony applications
-current_menu: symfony
 introduction: Learn how to deploy serverless Symfony applications on AWS Lambda using Bref.
 ---
+
+# Serverless Symfony applications
 
 This guide helps you run Symfony applications on AWS Lambda using Bref. These instructions are kept up-to-date to be compatible with the latest Symfony version.
 

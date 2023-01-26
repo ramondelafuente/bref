@@ -1,10 +1,8 @@
 ---
-title: Exposing a RDS database on the internet
 introduction: Configure RDS to expose a RDS database publicly so that you can access it from your computer.
-previous:
-    link: /docs/environment/database.html
-    title: Databases
 ---
+
+# Exposing a RDS database on the internet
 
 [&#9664; Back to the "Databases" documentation](database.md).
 

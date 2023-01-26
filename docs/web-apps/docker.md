@@ -1,10 +1,4 @@
----
-title: Docker
-current_menu: web-docker
-previous:
-    link: local-development.html
-    title: Local development for web apps
----
+# Docker
 
 AWS Lambda supports running a Docker image, instead of running your application in the default Linux environment. We recommend Docker **as a last resort**, as it is less practical and usually comes with slightly worse cold starts. Yes, Docker is great and probably sounds familiar, but is often not worth it on Lambda.
 

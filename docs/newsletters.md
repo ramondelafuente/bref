@@ -1,8 +1,8 @@
 ---
-title: Newsletters
-current_menu: newsletters
 introduction: A collection of newsletters related to serverless and PHP.
 ---
+
+# Newsletter
 
 This page collects newsletters related to serverless and PHP. Those are not necessarily related to Bref.
 

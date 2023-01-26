@@ -1,14 +1,8 @@
 ---
-title: Typed PHP Lambda handlers
-current_menu: typed-handlers
 introduction: Handle AWS Lambda events using typed PHP classes.
-previous:
-    link: /docs/runtimes/function.html
-    title: PHP functions on AWS Lambda
-next:
-    link: /docs/function/local-development.html
-    title: Local development
 ---
+
+# Typed PHP Lambda handlers
 
 Handling Lambda events via an anonymous function is the simplest approach:
 

@@ -1,8 +1,8 @@
 ---
-title: Serverless Laravel applications
-current_menu: laravel
 introduction: Learn how to deploy serverless Laravel applications on AWS Lambda using Bref.
 ---
+
+# Serverless Laravel applications
 
 This guide helps you run Laravel applications on AWS Lambda using Bref. These instructions are kept up to date to target the latest Laravel version.
 
@@ -117,7 +117,7 @@ As you may have noticed, we define a function named "artisan" in `serverless.yml
 
 For example, to execute an `artisan` command on Lambda for the above configuration, run the below command.
 
-```sh
+```bash
 serverless bref:cli --args="<artisan command and options>"
 ```
 
@@ -216,7 +216,7 @@ If your templates reference some assets via direct path, you should edit them to
 
 Laravel has a [filesystem abstraction](https://laravel.com/docs/filesystem) that lets us easily change where files are stored. When running on Lambda, you will need to use the `s3` adapter to store files on AWS S3. To do this, configure you production `.env` file:
 
-```dotenv
+```bash
 # .env
 FILESYSTEM_DISK=s3
 ```
@@ -331,7 +331,7 @@ but doing this will not let your application work locally. A better solution, bu
 
 You can now configure the `public` disk to use S3 by changing your production `.env`:
 
-```dotenv
+```bash
 FILESYSTEM_DISK=s3
 FILESYSTEM_DISK_PUBLIC=s3
 ```

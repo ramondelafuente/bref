@@ -1,14 +1,8 @@
 ---
-title: Web applications on AWS Lambda
-current_menu: web-apps
 introduction: Learn how to run serverless HTTP applications with PHP on AWS Lambda using Bref.
-previous:
-    link: /docs/runtimes/
-    title: PHP runtimes for AWS Lambda
-next:
-    link: /docs/websites.html
-    title: Website assets
 ---
+
+# Web applications on AWS Lambda
 
 To run HTTP APIs and websites on AWS Lambda, Bref runs your code **using PHP-FPM**. That means PHP applications can run on Lambda just like on any other PHP hosting platform.
 
@@ -65,7 +59,7 @@ functions:
             - ${bref:layer.php-74-fpm}
 ```
 
-To learn more check out [the runtimes documentation](/docs/runtimes/README.md).
+To learn more check out [the runtimes documentation](/docs/runtimes/index.mdx).
 
 ## Routing
 

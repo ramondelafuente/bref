@@ -1,7 +1,4 @@
----
-title: Creating AWS access keys
-introduction: How to create AWS access keys for Bref.
----
+# Creating AWS access keys
 
 To create AWS access key for Bref and the `serverless` CLI tool follow these steps:
 

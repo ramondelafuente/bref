@@ -1,8 +1,8 @@
 ---
-title: serverless.yml
-current_menu: serverless-yml
 introduction: Configure your application with the serverless.yml file.
 ---
+
+# serverless.yml
 
 Your application is deployed using the Serverless framework based on the `serverless.yml` configuration file.
 

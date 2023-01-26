@@ -1,7 +1,4 @@
----
-title: Deployment
-current_menu: deploy
----
+# Deployment
 
 Bref recommends using [the Serverless framework](https://serverless.com/) to deploy your serverless application. This page will show you how.
 

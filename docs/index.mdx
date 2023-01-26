@@ -1,11 +1,6 @@
----
-title: What is Bref and serverless?
-current_menu: what-is-bref
-introduction: An introduction to what serverless and Bref can offer for PHP applications.
-next:
-    link: /docs/installation.html
-    title: Installation
----
+export const description = 'An introduction to what serverless and Bref can offer for PHP applications.';
+
+# What is Bref and serverless?
 
 Serverless means using cloud services that manage the servers for us.
 
@@ -31,9 +26,7 @@ FaaS is a way to run code where the hosting provider takes care of setting up ev
 
 ## Why Bref?
 
-<p class="text-xl">
 Bref aims to make running PHP applications simple.
-</p>
 
 To reach that goal, Bref takes advantage of serverless technologies. However, while serverless is promising, there are many choices to make, tools to build and best practices to figure out.
 
@@ -77,91 +70,7 @@ Bref aims to support any PHP framework as well.
 
 If you are interested in real-world examples as well as cost analyses head over to the [**Case Studies** page](case-studies.md).
 
-## Maturity matrix
-
-The matrix below provides an overview of the "maturity level" for common PHP applications.
-
-This maturity level is a vague metric, however it can be useful to anticipate the effort and the limitations to expect for each scenario. While a green note doesn't mean that Bref and Lambda are silver bullets for the use case (there are no silver bullets), a red note doesn't mean this is impossible or advised against.
-
-This matrix will be updated as Bref and AWS services evolve over time.
-
-<table class="text-xs sm:text-sm text-gray-700 table-fixed">
-    <tr class="bg-gray-100">
-        <th class="p-4"></th>
-        <th class="font-normal p-4">Simplicity</th>
-        <th class="font-normal p-4">Performance</th>
-        <th class="font-normal p-4">Reliability</th>
-    </tr>
-    <tr class="border-b border-gray-200">
-        <td class="p-4 bg-gray-100 font-bold">
-            Jobs, Cron
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-    </tr>
-    <tr class="border-b border-gray-200">
-        <td class="p-4 bg-gray-100 font-bold">API</td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-    </tr>
-    <tr class="border-b border-gray-200">
-        <td class="p-4 bg-gray-100 font-bold">Website</td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-    </tr>
-    <tr class="border-b border-gray-200">
-        <td class="p-4 bg-gray-100 font-bold">Legacy application</td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-orange-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-        <td class="p-4 text-center">
-            <span class="maturity-icon shadow bg-green-400"></span>
-        </td>
-    </tr>
-    <tr class="text-xs text-center leading-normal text-gray-600">
-        <td></td>
-        <td class="p-3">
-            Is this documented and simple to achieve?
-        </td>
-        <td class="p-3">
-            Is performance acceptable?
-        </td>
-        <td class="p-3">
-            Is this scenario production-ready?
-        </td>
-    </tr>
-</table>
-
-<div class="text-left text-xs text-gray-700 mb-8">
-    Legend:
-    <span class="inline-block my-1 mx-1 sm:mx-2 bg-green-100 text-green-600 rounded-full px-4 py-1">Good use case</span>
-    <span class="inline-block my-1 mx-1 sm:mx-2 bg-orange-100 text-orange-600 rounded-full px-4 py-1">Some drawbacks</span>
-    <span class="inline-block my-1 ml-1 sm:ml-2 bg-red-100 text-red-600 rounded-full px-4 py-1">Strong limitations</span>
-</div>
+## Maturity
 
 - **Jobs, Cron**
 
