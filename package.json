@@ -1,9 +1,9 @@
 {
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "cd website && next dev",
+    "build": "cd website && next build",
+    "start": "cd website && next start",
+    "lint": "cd website && next lint"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {

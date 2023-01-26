@@ -7,9 +7,8 @@
 /.phpcs-cache
 /composer.lock
 /.couscous/
-/website/node_modules/
-/website/template/output.css
 /.netlify/
 .DS_Store
 /.serverless/
 .phpunit.result.cache
+node_modules
