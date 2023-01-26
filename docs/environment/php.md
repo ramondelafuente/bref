@@ -144,7 +144,7 @@ To create your custom layer, you will need to:
 
 To compile the extension, Bref provides the `bref/build-php-*` Docker images. Here is an example with Blackfire:
 
-```dockerfile
+```docker
 FROM bref/build-php-74
 
 RUN curl -A "Docker" -o /tmp/blackfire.so -L -s "https://packages.blackfire.io/binaries/blackfire-php/1.42.0/blackfire-php-linux_amd64-php-74.so"

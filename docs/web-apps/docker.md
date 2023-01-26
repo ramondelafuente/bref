@@ -16,7 +16,7 @@ Bref helps you deploy to AWS Lambda using Docker by offering
 out-of-the-box base images that are package for the Lambda environment.
 Here is an example of a Docker image
 
-```Dockerfile
+```docker
 FROM bref/php-80-fpm
 
 COPY . /var/task
@@ -34,7 +34,7 @@ This Dockerfile outlines the 3 key aspects of Docker on Lambda:
 You may also enable PHP extensions by pulling them from
 [Bref Extensions](https://github.com/brefphp/extra-php-extensions)
 
-```Dockerfile
+```docker
 FROM bref/php-80-fpm
 
 COPY --from=bref/extra-redis-php-80:0.10 /opt/bref-extra /opt/bref-extra
