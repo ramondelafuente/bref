@@ -60,10 +60,10 @@ export const Header = forwardRef(function Header({ className }, ref) {
           )}
       />
       <div className="max-w-4xl mx-auto px-4 h-14 sm:px-6 lg:z-30 lg:px-8 flex items-center justify-between gap-12">
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <Link href="/" title="Bref - Serverless PHP made simple"
                 className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">
-            Bref
+            bref
           </Link>
         </div>
         <Search />
