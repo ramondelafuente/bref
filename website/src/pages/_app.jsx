@@ -31,12 +31,11 @@ export default function App({ Component, pageProps }) {
         ) : (
           <title>{`${pageProps.title} - Bref`}</title>
         )}
-        <meta name="description" content={pageProps.description} />
+        <meta name="description" content={pageProps.description ?? pageProps.introduction ?? ''} />
       </Head>
       <MDXProvider components={mdxComponents}>
           {isDocumentation ? (
               <DocsLayout {...pageProps}>
-                  <h1>{pageProps.title}</h1>
                   <Component {...pageProps} />
               </DocsLayout>
           ) : (
