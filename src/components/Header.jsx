@@ -3,7 +3,6 @@ import Link from 'next/link'
 import clsx from 'clsx'
 import { motion, useScroll, useTransform } from 'framer-motion'
 
-import { Button } from '@/components/Button'
 import { Logo } from '@/components/Logo'
 import {
   MobileNavigation,
@@ -12,6 +11,7 @@ import {
 import { useMobileNavigationStore } from '@/components/MobileNavigation'
 import { ModeToggle } from '@/components/ModeToggle'
 import { MobileSearch, Search } from '@/components/Search'
+import { GitHubIcon } from '@/components/icons/GitHubIcon';
 
 function TopLevelNavItem({ href, title, children }) {
   return (
@@ -40,9 +40,9 @@ export const Header = forwardRef(function Header({ className }, ref) {
       ref={ref}
       className={clsx(
         className,
-        'fixed inset-x-0 top-0 z-50 flex h-14 items-center justify-between gap-12 px-4 transition sm:px-6 lg:z-30 lg:px-8',
+        'fixed inset-x-0 top-0 z-50 transition',
         !isInsideMobileNavigation &&
-          'backdrop-blur-sm dark:backdrop-blur lg:left-72 xl:left-80',
+          'backdrop-blur-sm dark:backdrop-blur',
         isInsideMobileNavigation
           ? 'bg-white dark:bg-zinc-900'
           : 'bg-white/[var(--bg-opacity-light)] dark:bg-zinc-900/[var(--bg-opacity-dark)]'
@@ -53,42 +53,43 @@ export const Header = forwardRef(function Header({ className }, ref) {
       }}
     >
       <div
-        className={clsx(
-          'absolute inset-x-0 top-full h-px transition',
-          (isInsideMobileNavigation || !mobileNavIsOpen) &&
-            'bg-zinc-900/7.5 dark:bg-white/7.5'
-        )}
+          className={clsx(
+              'absolute inset-x-0 top-full h-px transition ',
+              (isInsideMobileNavigation || !mobileNavIsOpen) &&
+              'bg-zinc-900/7.5 dark:bg-white/7.5'
+          )}
       />
-      <Search />
-      <div className="flex items-center gap-5 lg:hidden">
-        <MobileNavigation />
-        <Link href="/" aria-label="Home">
-          <Logo className="h-6" />
-        </Link>
-      </div>
-      <div className="flex items-center gap-5">
-        <nav className="hidden md:block">
-          <ul role="list" className="flex items-center gap-8">
-            <TopLevelNavItem href="/docs" title="Bref documentation for serverless PHP applications">Documentation</TopLevelNavItem>
-            <TopLevelNavItem href="/docs/news" title="Bref news">News</TopLevelNavItem>
-            <TopLevelNavItem href="https://github.com/brefphp/bref" title="Bref on GitHub">
-              <svg className="fill-current inline opacity-50 w-4 h-4 -mt-1 mr-2" xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 20 20"><title>GitHub</title>
-                <path
-                    d="M10 0a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.1.39-1.99 1.03-2.69a3.6 3.6 0 0 1 .1-2.64s.84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.37.2 2.4.1 2.64.64.7 1.03 1.6 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .26.18.58.69.48A10 10 0 0 0 10 0"></path>
-              </svg>
-              GitHub
-            </TopLevelNavItem>
-          </ul>
-        </nav>
-        <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
-        <div className="flex gap-4">
-          <MobileSearch />
-          <ModeToggle />
+      <div className="max-w-4xl mx-auto px-4 h-14 sm:px-6 lg:z-30 lg:px-8 flex items-center justify-between gap-12">
+        <div className="hidden md:block">
+          <Link href="/" title="Bref - Serverless PHP made simple"
+                className="text-sm leading-5 text-zinc-600 transition hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-white">
+            Bref
+          </Link>
         </div>
-        {/*<div className="hidden min-[416px]:contents">*/}
-        {/*  <Button href="#">Sign in</Button>*/}
-        {/*</div>*/}
+        <Search />
+        <div className="flex items-center gap-5 lg:hidden">
+          <MobileNavigation />
+          <Link href="/" aria-label="Home">
+            <Logo className="h-6" />
+          </Link>
+        </div>
+        <div className="flex items-center gap-5">
+          <nav className="hidden md:block">
+            <ul role="list" className="flex items-center gap-8">
+              <TopLevelNavItem href="/docs" title="Bref documentation for serverless PHP applications">Documentation</TopLevelNavItem>
+              <TopLevelNavItem href="/docs/news" title="Bref news">News</TopLevelNavItem>
+              <TopLevelNavItem href="https://github.com/brefphp/bref" title="Bref on GitHub">
+                <GitHubIcon className="fill-current inline opacity-50 w-4 h-4 -mt-1 mr-2" />
+                GitHub
+              </TopLevelNavItem>
+            </ul>
+          </nav>
+          <div className="hidden md:block md:h-5 md:w-px md:bg-zinc-900/10 md:dark:bg-white/15" />
+          <div className="flex gap-4">
+            <MobileSearch />
+            <ModeToggle />
+          </div>
+        </div>
       </div>
     </motion.div>
   )

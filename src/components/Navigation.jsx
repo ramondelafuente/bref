@@ -262,6 +262,7 @@ export function Navigation(props) {
   return (
     <nav {...props}>
       <ul role="list">
+        <TopLevelNavItem href="/" title="Bref - Serverless PHP made simple">Home</TopLevelNavItem>
         <TopLevelNavItem href="/docs" title="Bref documentation for serverless PHP applications">Documentation</TopLevelNavItem>
         <TopLevelNavItem href="/docs/news" title="Bref news">News</TopLevelNavItem>
         <TopLevelNavItem href="https://github.com/brefphp/bref" title="Bref on GitHub">

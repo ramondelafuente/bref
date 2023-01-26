@@ -2,13 +2,13 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 import { Footer } from '@/components/Footer'
-import { Header } from '@/components/Header'
+import { DocsHeader } from '@/components/DocsHeader'
 import { Logo } from '@/components/Logo'
 import { Navigation } from '@/components/Navigation'
 import { Prose } from '@/components/Prose'
 import { SectionProvider } from '@/components/SectionProvider'
 
-export function Layout({ children, sections = [] }) {
+export function DocsLayout({ children, sections = [] }) {
   return (
     <SectionProvider sections={sections}>
       <div className="lg:ml-72 xl:ml-80">
@@ -21,7 +21,7 @@ export function Layout({ children, sections = [] }) {
               <Logo className="h-6" />
             </Link>
           </div>
-          <Header />
+          <DocsHeader />
           <Navigation className="hidden lg:mt-10 lg:block" />
         </motion.header>
         <div className="relative px-4 pt-14 sm:px-6 lg:px-8">

@@ -3,7 +3,7 @@ import { Dialog, Transition } from '@headlessui/react'
 import { motion } from 'framer-motion'
 import create from 'zustand'
 
-import { Header } from '@/components/Header'
+import { DocsHeader } from '@/components/DocsHeader'
 import { Navigation } from '@/components/Navigation'
 
 function MenuIcon(props) {
@@ -87,7 +87,7 @@ export function MobileNavigation() {
                 leaveFrom="opacity-100"
                 leaveTo="opacity-0"
               >
-                <Header />
+                <DocsHeader />
               </Transition.Child>
 
               <Transition.Child
