@@ -7,10 +7,11 @@ website-next-dev:
 	npm run dev
 
 # Generate and deploy the production version of the website using http://couscous.io
-website: node_modules
-	vercel pull
-	vercel build --prod
-	vercel --prebuilt --prod
+website: node_modules src/pages/docs
+	npm run build
+
+src/pages/docs: bref
+	cp -r bref/docs src/pages/docs
 
 node_modules:
 	npm install
