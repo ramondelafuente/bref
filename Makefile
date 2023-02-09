@@ -15,7 +15,7 @@ node_modules:
 	npm install
 
 # Run a local preview of the website
-website-preview:
+website-preview: node_modules
 	npm run dev
 
 # Deploy the demo functions
