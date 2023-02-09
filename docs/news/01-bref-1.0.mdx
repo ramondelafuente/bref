@@ -1,10 +1,8 @@
----
-subTitle: Celebrating 1 billion executions per month
-layout: news-article
-articleDate: November 2020
-author: Matthieu Napoli
-authorGithub: mnapoli
----
+export const subTitle = 'Celebrating 1 billion executions per month';
+export const layout = 'news-article';
+export const articleDate = 'November 2020';
+export const author = 'Matthieu Napoli';
+export const authorGithub = 'mnapoli';
 
 # Bref 1.0 is released 🎉
 
@@ -136,7 +134,7 @@ return function ($event) {
 ```
 
 But for months now, you can also create fully typed handler classes instead.
-This is now documented in the [**Typed PHP Lambda handlers**](/docs/function/handlers.md) page.
+This is now documented in the [**Typed PHP Lambda handlers**](/docs/function/handlers.mdx) page.
 
 You can now write asynchronous workers to process SQS queues, process uploaded files via S3 events, create decoupled microservices using EventBridge, etc.
 Well, you already could, but now it will be a bit easier.
@@ -146,7 +144,7 @@ If you are interested, [get in touch to work together](mailto:matthieu@null.tc).
 You can also check out [Serverless Visually Explained](https://serverless-visually-explained.com/?ref=bref-1.0), it contains examples for those use cases.
 </self-promo\>
 
-Finally, the [`BREF_LOOP_MAX` variable](/docs/environment/performances.md#bref-for-event-driven-functions) is now documented, for those ready to keep the PHP process alive between events to accelerate their workers.
+Finally, the [`BREF_LOOP_MAX` variable](/docs/environment/performances.mdx#bref-for-event-driven-functions) is now documented, for those ready to keep the PHP process alive between events to accelerate their workers.
 
 ### Redesigning the header
 
@@ -176,7 +174,7 @@ Hello Jane
 
 What's awesome is that you decide if you want to use Docker or not (with the Bref images). You can skip Docker for best performances and ease of use, or use Docker to run in an environment that replicates production.
 
-Read more in the documentation: [Local development for functions](/docs/function/local-development.md).
+Read more in the documentation: [Local development for functions](/docs/function/local-development.mdx).
 
 ## API Gateway v2
 
@@ -210,7 +208,7 @@ functions:
 ```
 
 **However don't do this blindly:** this will delete your REST API to create a new HTTP API, which will break custom domains you may have set up.
-Instead, you can deploy the same Lambda with both v1 and v2, [set up your domain on v2](/docs/environment/custom-domains.md), and then delete v1:
+Instead, you can deploy the same Lambda with both v1 and v2, [set up your domain on v2](/docs/environment/custom-domains.mdx), and then delete v1:
 
 ```yaml
 functions:

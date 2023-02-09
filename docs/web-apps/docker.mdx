@@ -4,11 +4,11 @@ AWS Lambda supports running a Docker image, instead of running your application 
 
 You should consider deploying using Docker when:
 
-- Your Lambda Function is [larger than 250MB when unzipped](../environment/storage.md)
+- Your Lambda Function is [larger than 250MB when unzipped](../environment/storage.mdx)
 - You reached the limit of 5 Lambda layers (e.g. for extra PHP extensions)
 - You need resources installed locally (e.g. mysqldump)
 
-> Note: this documentation page assumes that you have read about [web apps on Lambda](../runtimes/http.md) first.
+> Note: this documentation page assumes that you have read about [web apps on Lambda](../runtimes/http.mdx) first.
 
 ## Docker Image
 
@@ -92,7 +92,7 @@ will always be empty when a new cold start happens. Avoid
 writing content to `/tmp` in your Dockerfile because that
 content will **not be available** for your Lambda function.
 
-[Read more about file storage in Lambda](../environment/storage.md).
+[Read more about file storage in Lambda](../environment/storage.mdx).
 
 ## Docker Registry
 

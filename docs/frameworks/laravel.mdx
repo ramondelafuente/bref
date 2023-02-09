@@ -1,6 +1,4 @@
----
-introduction: Learn how to deploy serverless Laravel applications on AWS Lambda using Bref.
----
+export const description = 'Learn how to deploy serverless Laravel applications on AWS Lambda using Bref.';
 
 # Serverless Laravel applications
 
@@ -10,7 +8,7 @@ A demo application is available on GitHub at [github.com/brefphp/examples](https
 
 ## Setup
 
-First, make sure you have followed the [Installation guide](../installation.md) to create an AWS account and install the necessary tools.
+First, make sure you have followed the [Installation guide](../installation.mdx) to create an AWS account and install the necessary tools.
 
 Next, in an existing Laravel project, install Bref and the [Laravel-Bref package](https://github.com/brefphp/laravel-bridge).
 
@@ -30,7 +28,7 @@ By default, the Laravel-Bref package will automatically configure Laravel to wor
 
 If you are curious, the package will:
 
-- enable the `stderr` log driver, to send logs to CloudWatch ([read more about logs](../environment/logs.md))
+- enable the `stderr` log driver, to send logs to CloudWatch ([read more about logs](../environment/logs.mdx))
 - enable the [`cookie` session driver](https://laravel.com/docs/session#configuration)
     - if you don't need sessions (e.g. for an API), you can manually set `SESSION_DRIVER=array` in `.env`
     - if you prefer, you can configure sessions to be store in database or Redis
@@ -61,11 +59,11 @@ At the moment, we deployed our local installation to Lambda. When deploying for 
 - our local `.env` file,
 - or any other dev artifact.
 
-Follow [the deployment guide](/docs/deploy.md#deploying-for-production) for more details.
+Follow [the deployment guide](/docs/deploy.mdx#deploying-for-production) for more details.
 
 ## Troubleshooting
 
-In case your application is showing a blank page after being deployed, [have a look at the logs](../environment/logs.md).
+In case your application is showing a blank page after being deployed, [have a look at the logs](../environment/logs.mdx).
 
 ## Trusted proxies
 
@@ -109,7 +107,7 @@ To use DynamoDB as a cache store, change this configuration in `config/cache.php
   ],
 ```
 
-Then follow [this section of the documentation](/docs/environment/storage.md#deploying-dynamodb-tables) to deploy your DynamoDB table using the Serverless Framework.
+Then follow [this section of the documentation](/docs/environment/storage.mdx#deploying-dynamodb-tables) to deploy your DynamoDB table using the Serverless Framework.
 
 ## Laravel Artisan
 
@@ -194,7 +192,7 @@ npm run prod
 Now deploy your website using `serverless deploy`. Lift will create all required resources and take care of
 uploading your assets to S3 automatically.
 
-For more details, see the [Websites section](/docs/websites.md) of this documentation
+For more details, see the [Websites section](/docs/websites.mdx) of this documentation
 and the official <a href="https://github.com/getlift/lift/blob/master/docs/server-side-website.md">Lift documentation</a>.
 
 ### Assets in templates
