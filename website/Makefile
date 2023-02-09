@@ -10,8 +10,8 @@ website-next-dev:
 website: node_modules src/pages/docs
 	npm run build
 
-src/pages/docs: bref
-	cp -r bref/docs src/pages/docs
+src/pages/docs:
+	cp -r ../docs src/pages/docs
 
 node_modules:
 	npm install
