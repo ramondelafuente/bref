@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./{src,mdx,md}/**/*.{js,mjs,jsx,mdx}'],
@@ -21,6 +23,9 @@ module.exports = {
     },
     typography: require('./typography'),
     extend: {
+      fontFamily: {
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+      },
       boxShadow: {
         glow: '0 0 4px rgb(0 0 0 / 0.1)',
       },
