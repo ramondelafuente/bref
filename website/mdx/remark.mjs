@@ -1,9 +1,4 @@
-import { mdxAnnotations } from 'mdx-annotations';
-import remarkFrontmatter from 'remark-frontmatter';
-import remarkMdxFrontmatter from 'remark-mdx-frontmatter';
+import { mdxAnnotations } from 'mdx-annotations'
+import remarkGfm from 'remark-gfm'
 
-export const remarkPlugins = [
-    mdxAnnotations.remark,
-    remarkFrontmatter,
-    remarkMdxFrontmatter,
-];
+export const remarkPlugins = [mdxAnnotations.remark, remarkGfm]
