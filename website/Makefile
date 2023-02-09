@@ -1,9 +1,16 @@
-preview:
+website-preview: node_modules
+	$(MAKE) website-preview-parallel-jobs -j2
+website-preview-parallel-jobs: website-live-sync-doc-files website-next-dev
+website-live-sync-doc-files:
+	npx sync-directory ../docs src/pages/docs --deleteOrphaned --watch
+website-next-dev:
 	npm run dev
 
-src/pages/docs: bref
-	cp -r bref/docs src/pages/docs
+# Generate and deploy the production version of the website using http://couscous.io
+website: node_modules
+	vercel pull
+	vercel build --prod
+	vercel --prebuilt --prod
 
-bref:
-	git submodule init
-	git submodule update
+node_modules:
+	npm install

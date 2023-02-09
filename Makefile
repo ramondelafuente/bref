@@ -7,16 +7,12 @@ runtime_build_status:
 	aws codepipeline get-pipeline-state --name=bref-php-binary | jq ".stageStates[1].latestExecution.status"
 
 # Generate and deploy the production version of the website using http://couscous.io
-website: node_modules
-	cd website && vercel pull
-	cd website && vercel build --prod
-	cd website && vercel --prebuilt --prod
-node_modules:
-	npm install
+website:
+	cd website && make website
 
 # Run a local preview of the website
-website-preview: node_modules
-	npm run dev
+website-preview:
+	cd website && make website-preview
 
 # Deploy the demo functions
 demo:
