@@ -31,7 +31,7 @@ export default function App({ Component, pageProps }) {
         ) : (
           <title>{`${pageProps.title} - Bref`}</title>
         )}
-        <meta name="description" content={pageProps.description ?? pageProps.introduction ?? ''} />
+        <meta name="description" content={pageProps.description} />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css"/>
       </Head>
       <MDXProvider components={mdxComponents}>
