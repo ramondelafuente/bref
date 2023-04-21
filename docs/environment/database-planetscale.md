@@ -135,6 +135,9 @@ doctrine:
             # Connect to the database via SSL
             !php/const:PDO::MYSQL_ATTR_SSL_CA: /opt/bref/ssl/cert.pem
 
+            # Note: When using symfony/yaml 6.2 and up (there is no colon after "const") it should be
+            !php/const PDO::MYSQL_ATTR_SSL_CA: /opt/bref/ssl/cert.pem
+
 # ...
 ```
 
